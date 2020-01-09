@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between; 
     padding: 20px;
+    background: rgba(21,21,21,0.9);
 }
 
 .rr-logo{
@@ -24,27 +25,38 @@
 }
 .banner{
     display: flex;
-    padding: 40px 100px 0 40px;
+    padding: 40px 50px 0 40px;
+}
+.banner-image-container{
+    position: relative;
+    padding: 40px;
+    margin-left: -300px;
 }
 .banner-image{
-    width: 1100px;
+    width: 500px;
     height: 350px;
-    border: 1px solid white;
-    margin-left: -600px;
+    background-image: url("../img/se-bigpic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .banner-details{
     z-index: 1;
     position: relative;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 .banner-heading{
     font-size: 90px;
     padding: 0;
     margin: 0;
+    background-color: #E95F26;
+    padding-left: 20px;
+    color: #ffffff;
 }
 .banner-desc{
     width: 60%;
-    font-size: 16px;
+    font-size: 18px;
+    color: #353535;
+    font-weight: 500;
 }
 
 .link-2020{
@@ -54,11 +66,12 @@
     font-size: 22px;
 }
 .text-2020{
-    background-image: url('../img/10166.png');
+    background-image: url('../img/se-greyarrow.png');
     background-repeat: no-repeat;
     padding: 50px;
     background-size: 15%;
     background-position: center;
+    color: #353535;
 }
 .testimonials{
     padding: 70px;
@@ -67,19 +80,33 @@
 }
 .linkedin{
     border-radius: 50%;
-    border: 1px solid black;
     width: 40px;
     height: 40px;
     position: absolute;
     left: 10px;
     bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+	color: black;
+    mix-blend-mode: screen;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .intern-img{
-    border: 1px solid black;
     width: 400px;
     height: 300px;
     position: relative;
+}
+
+#rachel{
+    background-image: url('../img/rachel.jpg');
+}
+
+#amy{
+    background-image: url('../img/amy.png');
 }
 
 .intern-deets{
@@ -114,18 +141,15 @@
     padding-right: 100px;
     padding-left: 0;
 }
-
-.banner-image-container{
-    position: relative;
-}
-
 .banner-image-container .banner-dots-right{
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
 }
 .banner-image-container .banner-dots-left{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 20px;
+    left: 10px;
+    z-index: 1;
 }
