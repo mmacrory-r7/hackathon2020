@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    max-width: 100%;
+    margin: 50px 10px 50px 10px;
+}
+.containerText {
+    display: flex;
+    width: 250px;
+    height: 85%;
+    padding: 4rem 1.5rem 4rem 1rem;
+    margin: 0 2rem 0 2rem;
+    min-width: 100px;
+}
+h1 {
+    text-align: end;
+    padding-top: 350px;
+}
+#item1{
+    background: url(../../resources/images/work-ux.jpg);
+    /*filter: brightness(50%);   /*filter: brightness(50%);*/
+}
+#item2{
+    background: url(../../resources/images/work-se.jpg);
+}
+#item3{
+    background: url(../../resources/images/work-pm.jpg);
+}
+#item4{
+    background: url(../../resources/images/it.jpg);
+}
+.image:hover {
+    filter: brightness(50%);
+}
+/*.a:hover .containerText {*/
+/*    filter: brightness(50%);*/
+/*}*/
+.image {
+    color: white;
+    font-size: 20px;
+    height: 500px;
+}
+a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+a:hover {
+    text-decoration: #ffffff;
+}
+/*.font {*/
+/*    position: absolute;*/
+/*    bottom: 40px;*/
+/*    left: 30px;*/
+/*}*/
