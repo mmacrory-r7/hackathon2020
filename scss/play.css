@@ -1,0 +1,119 @@
+.top{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(21,21,21,0.9);
+}
+
+.rr-logo{
+  border: 1px solid black;
+  background-image: url("../img/rapidrecruit-logo.png") ;
+}
+
+.nav{
+  display: flex;
+}
+
+.nav li{
+  padding-right: 50px;
+  font-size: 16px;
+  list-style-type: none;
+}
+
+.nav a{
+  color: white;
+  text-decoration: none;
+}
+
+.work{
+  font-weight: 900;
+}
+.container {
+  display: flex;
+  max-width: 100%;
+  margin: 50px 10px 50px 10px;
+}
+
+.container {
+  display: flex;
+  max-width: 100%;
+  margin: 50px 10px 50px 10px;
+}
+.containerText {
+  display: flex;
+  width: 250px;
+  height: 85%;
+  padding: 4rem 1.5rem 4rem 1rem;
+  margin: 0 2rem 0 2rem;
+  min-width: 100px;
+}
+h1 {
+  text-align: end;
+  padding-top: 350px;
+}
+#item1{
+  background: url(../../resources/images/play-amp2020.jpg);
+  height: 200px;
+  width: 5px;
+  margin-top: 100px;
+  background-size: 100%;
+}
+#item2{
+  background: url(../../resources/images/play-giveback.jpg);
+  height: 200px;
+  width: 5px;
+  margin-top: 100px;
+  background-size: 100%;
+}
+#item3{
+  background: url(../../resources/images/play-summer.jpg);
+  height: 200px;
+  width: 5px;
+  margin-top: 100px;
+  background-size: 100%;
+}
+#item4{
+  background: url(../../resources/images/play-team.jpg);
+  height: 200px;
+  width: 5px;
+  margin-top: 100px;
+  background-size: 100%;
+}
+#item5{
+  background: url(../../resources/images/play-bsides.jpg);
+  height: 200px;
+  width: 5px;
+  margin-top: 100px;
+  background-size: 100%;
+}
+#item6{
+  background: url(../../resources/images/play-thursyay.jpg);
+  height: 200px;
+  width: 5px;
+  margin-top: 100px;
+  background-size: 100%;
+}
+
+.image:hover {
+  filter: brightness(50%);
+}
+/*.a:hover .containerText {*/
+/*    filter: brightness(50%);*/
+/*}*/
+.image {
+  color: white;
+  font-size: 20px;
+  height: 500px;
+}
+a {
+  text-decoration: none;
+  color: #F2F2F2;
+}
+a:hover {
+  text-decoration: #ffffff;
+}
+/*.font {*/
+/*    position: absolute;*/
+/*    bottom: 40px;*/
+/*    left: 30px;*/
+/*}*/
