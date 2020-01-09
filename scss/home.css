@@ -1,0 +1,302 @@
+ body {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    font-size: 120%;
+    background-color: white;
+    height: 100%;
+  }
+
+.top{
+display: flex;
+justify-content: space-between; 
+align-items: center;
+padding: 20px;
+background-color: rgba(21,21,21,0.9);
+}
+
+#wrapper{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    }
+    #wrapper.show{
+      background-color: white;
+    }
+    #wrapper:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    
+    }
+
+    #chat-area{
+        height: 85%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      #compose-area {
+        height: 15%;
+        width: 100%;
+        position: absolute;
+        box-sizing: border-box;
+        bottom: 0;
+        left: 0;
+        display:none;
+        font-size: 12px;
+      }
+      
+      textarea {
+        position:absolute;
+        padding:20px 20px;
+        background:#C4B7E1;
+        border:0;
+        margin:0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        font-size: 120%;
+        padding: .5em 10% .5em 2%;
+      }
+      
+      #sendButton {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        
+      }
+      
+      button {
+        position: relative;
+        box-sizing: border-box;
+        border: none;
+        cursor: pointer;
+        margin: 1px;
+        font-size: 120%;
+        background-color: lightgrey;
+        border-radius: 8px;
+        
+      }
+      
+      #startButton {
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 20px;
+        border: 2px solid grey;
+        max-width: 200px;
+        cursor: pointer;
+        background-color: white;
+      }
+      
+      #robot {
+        margin: 0 auto;
+        width: 200px;
+      }
+      
+      #cursor {
+        position: relative;
+        top: 4px;
+        left: 2px;
+      }
+      
+      .chat-container {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+      }
+      
+      .chat-wrapper {
+        position: relative;
+        height: 100%;
+        
+      }
+      
+      .avatar {
+        position: absolute;
+        top: 0px;
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-color: darkgray;
+        
+      }
+      
+      .avatar-bot {
+        left: -15px;
+        background: url(../../resources/images/robot.png);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+      }
+      
+      .avatar-user {
+        right: -15px;
+        background-image: url("https://cdn.glitch.com/e5ca6c0c-b21f-4a54-a1ad-6285b1bf8390%2Fdolphin.png?");
+      }
+      
+      .chat-bot {
+        background-color: #DCDCDC;
+        padding: 7px 15px;
+        float: left;
+        width: 60%;
+        margin: 0px 36% 15px 4%;
+        border-radius: 0px 20px 20px 20px;
+        box-sizing: border-box;
+        box-shadow: -3px 3px darkgrey;
+        min-height: 2em;
+        color: black;
+        font-size: 14px;
+      }
+      
+      .chat-user {
+        background-color: #9370DB;
+        padding: 7px 15px;
+        text-align: right;
+        border-radius: 20px 0px 20px 20px;
+        float: left;
+        width: 60%;
+        margin: 0px 4% 15px 36%;
+        box-sizing: border-box;
+        box-shadow: 3px 3px #C4B7E1;
+        min-height: 2em;
+        font-size: 14px;
+      }
+
+     
+
+      .banner{
+        display: flex;
+        margin:auto;
+        max-width: 1300px;
+    }
+    .banner-image{
+        max-width: 100%;
+        height: 450px;
+        border: 1px solid white;
+        margin-left: 0;
+    }
+    .banner-details{
+        z-index: 1;
+        position: relative;
+        padding-top: 40px;
+        width: 50%;
+    }
+
+    .title{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 700px;
+        margin-top: 50px;
+    }
+
+    .title span{
+        background: #E95F26;
+        display:inline-block;
+        padding: 20px;
+        color: white;
+        font-size: 100px;
+        width: 800px;
+        font-weight: 900;
+    }
+
+    .title span + span{
+        width: 581px;
+    }
+
+    
+
+    .banner-heading{
+        font-size: 80px;
+        padding: 0px 80px 0 40px;
+        margin: 0;
+        
+    }
+    .banner-desc{
+        width: 60%;
+        font-size: 16px;
+        padding-top: 330px;
+    }
+
+    .home-btn{
+        background: black;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration:none; 
+        font-size: 14px;
+    }
+
+    mark {
+        background-color: #e95f26;
+        color: black;
+      }
+    
+    .text-2020{
+    background-image: url('../img/10166.png');
+    background-repeat: no-repeat;
+    padding: 50px;
+    background-size: 15%;
+    background-position: center;
+    color: white;
+    }
+    
+    *, *:before, *:after {
+    box-sizing: border-box;
+    }
+    
+    
+    img{
+    max-width:100%;
+    }
+
+    .banner-image-container{
+        position: relative;
+        width:50%;
+    }
+    
+    .banner-image-container .banner-dots-right{
+        position: absolute;
+        top: -30px;
+        right: -30px;
+    }
+    .banner-image-container .banner-dots-left{
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+    }
+
+    button-3d {
+        position:relative;
+        width: auto;
+        display:inline-block;
+        color:#ecf0f1;
+        text-decoration:none;
+        border-radius:5px;
+        border:solid 1px #f39c12;
+        background:#e95f26;
+        text-align:center;
+        padding:16px 18px 14px;
+        margin: 12px;
+        
+        -webkit-transition: all 0.1s;
+          -moz-transition: all 0.1s;
+          transition: all 0.1s;
+          
+        -webkit-box-shadow: 0px 6px 0px #d35400;
+        -moz-box-shadow: 0px 6px 0px #d35400;
+        box-shadow: 0px 6px 0px #d35400;
+      }
+      
+      .button-3d:active{
+          -webkit-box-shadow: 0px 2px 0px #d35400;
+          -moz-box-shadow: 0px 2px 0px #d35400;
+          box-shadow: 0px 2px 0px #d35400;
+          position:relative;
+          top:4px;
+      }
