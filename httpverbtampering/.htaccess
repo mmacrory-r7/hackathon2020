@@ -1,7 +1,0 @@
-AuthType Basic
-AuthName "Restricted Files"
-AuthUserFile C:\xampp\apache\passwords
-
-<Limit POST>
-Require valid-user
-</Limit>
