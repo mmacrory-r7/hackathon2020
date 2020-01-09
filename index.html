@@ -4,38 +4,60 @@
     <title> Rapid Recruit</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="resources/stylesheets/main.css">
+    <link rel="stylesheet" href="resources/stylesheets/test.css">
 
   </head>
   <body class="body1">
-      <div id="content" >
-        <div id="header" class="ui-dark-header">
+      <div id="header" class="ui-dark-header">
           <div id="r7-logo">
             <img class="logo" src="resources/images/Rapid7_logo.png">
-            </div>
           </div>
-          <!--<div class="left-wrap"></div>-->
-          <div id="main">
+        </div>
+      <div id="content" >
+        <div class="element">
+            <div id="main">
+              <div id="launch" class="launchSuite"></div>
+                  <h1>Welcome to our home page</h1>
+                    <p>
+                          Website designed by interns for interns. Informational, inspiring and interactive. 
+                          Students interested in becoming an intern at Rapid7 will have a central base for 
+                          info on Rapid7, being part of the team and being an intern here.
+                    </p>
+                      <a class="bullet" href="/work/index.html">  Work  </a>
+                      <br><br>
+                      <a class="bullet" href="/play/index.html">  Play  </a>
+
+                      <div id="output"></div>
+                        <div id="wrapper">
+                          <div id="chat-area">
+                            <div id="start-screen">
+                              <div id="startButton">
+                                <div id="robot"></div>
+                                <img src="/resources/images/robot.png" height="100" width ="150" id="cursor"> or ⏎ to start!
+                              </div>
+                            </div>
+                          </div>
+                          <div id="compose-area">
+                            <textarea id="composer" class="text-input" type="text" autofocus="autofocus"></textarea>
+                            <div id="sendButton">
+                              <button>&nbsp;↵&nbsp;</button>
+                            </div>
+                          </div>                
+                        </div>
 
 
-            <!--<div id="metrics" class="metrics"><table><tr><td><span class="metricsTitles">AU</span></td><td><span class="metricsTitles">CA</span></td><td><span class="metricsTitles">EU</span></td><td><span class="metricsTitles">US</span></td></tr><tr><td><span>Running</span></td><td><span >Running</span></td><td><span >Stopped</span></td><td><span >Running</span></td></tr></table></div>   -->
-            <div id="launch" class="launchSuite">
-                <h1>Welcome to our home page</h1>
-                  <p>
-                        Website designed by interns for interns. Informational, inspiring and interactive. 
-                        Students interested in becoming an intern at Rapid7 will have a central base for 
-                        info on Rapid7, being part of the team and being an intern here.
-                  </p>
-                    <a class="bullet" href="/work/index.html">  Work  </a>
-                    <br><br>
-                    <a class="bullet" href="/play/index.html">  Play  </a>
-
-                    <div id="output"></div>
-      
-                    <div id="container">
-                        <input type="text" id="input" value="">
-                    </div>
-
-           
+                        <script src="variables.js"></script>
+                        <script src="listener.js"></script>
+                        <script src="thingsTheBotSays.js"></script>
+                        <script src="chatEngine.js"></script>
+                        <script src="botChat.js"></script>
+                        <script src="userChat.js"></script>
+                        <script src="send.js"></script>
+                        <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+                        <script src="https://button.glitch.me/button.js"></script>
+              </div>
+      </div>
+      </div>
+      </div>
   </body>
 </html>

@@ -45,4 +45,10 @@ img{
 		height: 50%;
 		@include wrapper-gradient-grey;
 	}
+
+.element{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
 }
