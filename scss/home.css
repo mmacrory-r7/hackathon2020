@@ -16,8 +16,8 @@ background-color: rgba(21,21,21,0.9);
 
 #wrapper{
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 0;
+    right: 0;
     }
     #wrapper.show{
       background-color: white;
@@ -173,12 +173,14 @@ background-color: rgba(21,21,21,0.9);
         display: flex;
         margin:auto;
         max-width: 1300px;
+        padding-top: 70px;
     }
     .banner-image{
         max-width: 100%;
         height: 450px;
         border: 1px solid white;
         margin-left: 0;
+        
     }
     .banner-details{
         z-index: 1;
@@ -192,7 +194,7 @@ background-color: rgba(21,21,21,0.9);
         top: 0px;
         left: 0px;
         width: 700px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .title span{
@@ -206,7 +208,7 @@ background-color: rgba(21,21,21,0.9);
     }
 
     .title span + span{
-        width: 581px;
+        width: 651px;
     }
 
     
@@ -219,8 +221,10 @@ background-color: rgba(21,21,21,0.9);
     }
     .banner-desc{
         width: 60%;
-        font-size: 16px;
-        padding-top: 330px;
+        font-size: 18px;
+        font-weight: 500;
+        padding-top: 380px;
+        color: #353535;
     }
 
     .home-btn{
@@ -263,11 +267,11 @@ background-color: rgba(21,21,21,0.9);
     .banner-image-container .banner-dots-right{
         position: absolute;
         top: -30px;
-        right: -30px;
+        right: 30px;
     }
     .banner-image-container .banner-dots-left{
         position: absolute;
-        bottom: -30px;
+        bottom: 70px;
         left: -30px;
     }
 
@@ -300,3 +304,18 @@ background-color: rgba(21,21,21,0.9);
           position:relative;
           top:4px;
       }
+
+      .nav{
+        display: flex;
+    }
+    
+    .nav li{
+        padding-right: 50px;
+        font-size: 16px;
+        list-style-type: none;
+    }
+    
+    .nav a{
+        color: white;
+        text-decoration: none;
+    }
