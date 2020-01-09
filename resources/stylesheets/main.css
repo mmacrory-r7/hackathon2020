@@ -1,0 +1,288 @@
+            .ui-dark-header
+            {
+              background: #212a33;
+              color: #E5E5E5;
+            }
+
+
+            .table__title-bar
+            {
+                background: #212933;
+                min-height: 40px;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                padding-top: 0px;
+                padding-right: 20px;
+                padding-bottom: 0px;
+                padding-left: 20px;
+                color: #FFFFFF;
+            }
+
+            .table_header
+            {
+                display: flex;
+                height: 40px;
+                position: relative;
+                color: #FFFFFF;
+                font-weight: 500;
+                font-size: 16px;
+                text-align: left;
+            }
+            .table_row
+            {
+                height: 30px;
+                padding: 0 20px;
+                font-size: 12px;
+                position: relative;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                text-overflow: ellipsis;
+            }
+            .logo
+            {
+                padding: 0 20px;
+                padding-top: 15px;
+                padding-right: 20px;
+                padding-bottom: 15px;
+                padding-left: 20px;
+                width: 220px;
+                height: 37px;
+
+            }
+
+            .loginLogo
+            {
+                padding: 0 20px;
+                padding-top: 30px;
+                padding-right: 20px;
+                padding-left: 20px;
+                width: 220px;
+                height: 37px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .dropdown
+            {
+                font-size: 12px;
+                padding: 10px 8px 10px 14px;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                position: relative;
+            }
+
+            .btn
+            {
+                color: #FFFFFF;
+                background-color: #0094D1;
+                border-color: #0094D1;
+                font-family: Roboto, "Helvetica Neue", Helvetica, Arial;
+                font-weight: 500;
+                box-sizing: border-box;
+                line-height: 1;
+                border-radius: 3px;
+                outline: none;
+                cursor: pointer;
+                font-size: 14px;
+                padding: 9px 15px;
+
+            }
+
+            .btnLogin
+            {
+                color: #FFFFFF;
+                background-color: #0094D1;
+                border-color: #0094D1;
+                font-family: Roboto, "Helvetica Neue", Helvetica, Arial;
+                font-weight: 500;
+                box-sizing: border-box;
+                line-height: 1;
+                border-radius: 3px;
+                outline: none;
+                cursor: pointer;
+                font-size: 14px;
+                padding: 9px 15px;
+                color: #fff;
+                display: inline-block;
+                height: 40px;
+                line-height: 36px;
+                padding: 0 15px;
+                border-radius: 3px;
+                font-size: 13px;
+                width: 100%;
+
+            }
+
+           .body1
+           {
+               font-family:Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+               font-size:12px;
+               line-height:1.42857;
+               color:#333;
+               background-color:#fff;
+               margin:0;
+               height: 100%;
+               background: #323B44;
+               color: #E5E5E5;
+           }
+           .label
+           {
+               display:inline-block;
+               max-width:100%;
+               margin-bottom:20px;
+               font-weight:700
+           }
+
+           .metrics
+           {
+               padding-top: 20px;
+               padding-bottom: 20px;
+               border:1px solid white;
+               max-width:30%;
+               margin: auto;
+               margin-top: 40px;
+           }
+
+           .metricsTitles
+           {
+              font-size: 3.286em;
+              color: #5797B7;
+              padding-bottom: 5px;
+              padding: 10px 8px 10px 14px;
+              cursor: default;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              cursor: pointer;
+              box-sizing: inherit;
+              display: block;
+           }
+
+
+
+           .launchSuite
+           {
+               padding-top: 20px;
+               padding-bottom: 20px;
+               max-width: 80%;
+               margin: auto;
+               margin-top: 40px;
+           }
+
+            .loginComponent
+            {
+                background-color: #414D58;
+                border: none;
+                box-shadow: none;
+                margin-top: 0;
+                font-family: "montserrat", Arial, Helvetica, sans-serif;
+                color: #777;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 1.4;
+                position: relative;
+                overflow: auto;
+                border-radius: 3px;
+                border-width: 1px;
+                height: auto;
+                margin: 100px auto 8px;
+                width: 400px;
+                min-width: 300px;
+            }
+
+            .loginHeader
+            {
+                padding: 30px 90px 75px;
+                position: relative;
+                z-index: 10;
+                transition: padding-bottom .4s;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+            .loginHeaderText
+            {
+                font-family: "montserrat", Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                line-height: 1.5;
+                margin-top: 10px;
+                text-align: center;
+                text-transform: none;
+                color: #fff;
+                margin: 0 0 15px;
+                padding: 0;
+            }
+
+            .textBox
+            {
+                font-family: "montserrat", Arial, Helvetica, sans-serif;
+                position: relative;
+                background-color: #fff;
+                border-color: #bbb;
+                height: 40px;
+                border: 1px solid #bbb;
+                display: inline-block;
+                float: left;
+                border-radius: 3px;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left:10px;
+            }
+
+            .bullet
+            {
+                font-family: "montserrat", Arial, Helvetica, sans-serif;
+                color: rgb(127, 220, 255);
+                float: left;
+                height: 30px;
+                padding: 0 0px;
+                font-size: 12px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                text-overflow: ellipsis;
+            }
+
+            .authContent
+            {
+                padding-top: 20px;
+                padding: 20px 42px 20px;
+                transition: padding-top .4s;
+                margin: 0;
+                border: 0;
+                outline: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                background: transparent;
+            }
+
+            .loginTable
+            {
+                margin:0;
+                padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 10px;
+                padding-bottom: 20px;
+            }
+
+            .rowSpacer
+            {
+                padding: 20px;
+            }
+
+            .mark 
+            {
+                background-color: palevioletred;
+                color: #333;
+            }
+            

@@ -1,0 +1,1 @@
+This is a txt file within a folder to test to check if appspider will find the test folder through predictable resource location.
