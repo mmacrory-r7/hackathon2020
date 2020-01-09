@@ -1,8 +1,3 @@
-/*
-
-This JavaScript file has all of the code to find chats from the bot and user and create the chat interface. Because the chat window will change as you type we need to manipulate the DOM (Document Object Model) and add HTML to display on the screen.
-
-*/
 
 function lookForChat() {
     // If there have been no chats yet, start the bot.

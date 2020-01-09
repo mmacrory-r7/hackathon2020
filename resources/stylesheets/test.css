@@ -439,7 +439,7 @@ html {
   
   .avatar-bot {
     left: -15px;
-    background-image: url("https://cdn.glitch.com/e5ca6c0c-b21f-4a54-a1ad-6285b1bf8390%2Frobot.svg");
+    background-image: "/resources/images/robot.png";
   }
   
   .avatar-user {
