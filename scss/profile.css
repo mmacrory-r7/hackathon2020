@@ -1,7 +1,3 @@
-
-#main{
-
-}
 .top{
     display: flex;
     justify-content: space-between; 
@@ -117,4 +113,19 @@
 .testimonials.right .intern-questions{
     padding-right: 100px;
     padding-left: 0;
+}
+
+.banner-image-container{
+    position: relative;
+}
+
+.banner-image-container .banner-dots-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.banner-image-container .banner-dots-left{
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
