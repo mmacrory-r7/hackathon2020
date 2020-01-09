@@ -1,52 +1,55 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
-    <title> Rapid Recruit</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="resources/stylesheets/test.css">
-
+    <title>Rapid Recruits Home</title>
+    <link rel="stylesheet" href="../resources/stylesheets/main.css">
+    <link rel="stylesheet" href="./scss/home.css">
   </head>
-  <body class="body1">
-      <div id="header" class="ui-dark-header">
-          <div id="r7-logo">
-            <img class="logo" src="resources/images/Rapid7_logo.png">
+  <body>
+    <div id="main">
+        <section class="top" style="background-color: rgba(21,21,21,0.9);">
+          <img class="rr-logo" src="./resources/images/rapidrecruit-logo.png" height ="50">
+          <div class="nav">
+            <li class="home"><a href="">Home</a></li>
+            <li class="work"><a href="/work/index.html">Work</a></li>
+            <li class="play"><a href="/">Play</a></li>
           </div>
-        </div>
-      <div id="content" >
-        <div class="element">
-            <div id="main">
-              <div id="launch" class="launchSuite"></div>
-                  <h1>Welcome to our home page</h1>
-                    <p>
-                          Website designed by interns for interns. Informational, inspiring and interactive. 
-                          Students interested in becoming an intern at Rapid7 will have a central base for 
-                          info on Rapid7, being part of the team and being an intern here.
-                    </p>
-                      <a class="bullet" href="/work/index.html">  Work  </a>
-                      <br><br>
-                      <a class="bullet" href="/play/index.html">  Play  </a>
-
-                      <div id="output"></div>
+        </section>
+        <section class="banner">
+          <div class="banner-details">
+            <div class="title">
+              <span class="banner-heading">Lets Impact</span>
+              <span class="banner-heading">Together</span>
+            </div>
+              <p class="banner-desc">Join us at Rapid7 for the cutomer focused, group focused placement year.</p>
+              <a href="" class="home-btn">Find out more</a>
+          </div>
+          <div class="banner-image-container">
+            
+            <img class="banner-image" src="/resources/images/homepage.png"/>
+            <img class="banner-dots-right" src="../img/se-righttop-dots.png"/>
+            <img class="banner-dots-left" src="../img/se-left-dots.png"/>
+          </div>
+        </section>
+        <div id="output"></div>
                         <div id="wrapper">
                           <div id="chat-area">
                             <div id="start-screen">
                               <div id="startButton">
                                 <div id="robot"></div>
-                                <img src="/resources/images/robot.png" height="100" width ="150" id="cursor"> or ⏎ to start!
+                                <img src="/resources/images/robot.png" height="100" width ="150" id="cursor"> or Enter to start!
                               </div>
                             </div>
                           </div>
                           <div id="compose-area">
                             <textarea id="composer" class="text-input" type="text" autofocus="autofocus"></textarea>
                             <div id="sendButton">
-                              <button>&nbsp;↵&nbsp;</button>
+                              <button>&nbsp;&nbsp;</button>
                             </div>
                           </div>                
                         </div>
 
-
-                        <script src="variables.js"></script>
+ <script src="variables.js"></script>
                         <script src="listener.js"></script>
                         <script src="thingsTheBotSays.js"></script>
                         <script src="chatEngine.js"></script>
@@ -55,9 +58,16 @@
                         <script src="send.js"></script>
                         <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
                         <script src="https://button.glitch.me/button.js"></script>
-              </div>
+                        <script>
+
+                          document.querySelector('#startButton').addEventListener('click', function(e){
+                            document.querySelector('#wrapper').classList.add('show');
+                          });
+                        </script>
+
+
       </div>
-      </div>
-      </div>
+    </div>
   </body>
 </html>
+
