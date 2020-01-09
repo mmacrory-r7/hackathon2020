@@ -1,0 +1,189 @@
+﻿// UTILITIES
+// Jonny Pyper
+// hello@crbntyp.com // www.crbntyp.com
+// ******************************************************************
+// basic text utilities map
+// ******************************************************************
+$displayMap:(
+    none: display,
+    block: display,
+    inline-block: display,
+    inline: display,
+    flex: display,
+    inline-flex: display,
+);
+$transformMap:(
+    uppercase: text-transform,
+    lowercase: text-transform,
+    capitalize: text-transform,
+    inherit: text-transform,
+);
+$alignMap:(
+    right: text-align,
+    left: text-align,
+    center: text-align,
+);
+
+// text utilities
+// ******************************************************************
+.text {
+
+    // text colors (map -> config.scss)
+    @each $colorName,
+    $colorVar in $colorMap {
+        &.is-#{$colorName} {
+            color: $colorVar;
+
+            &.darken {
+                color: darken($colorVar, 40%);
+            }
+        }
+    }
+}
+
+// general utilities
+// ******************************************************************
+.display {
+
+    // block elements (map -> utilities.scss)
+    @each $displayName,
+    $displayVar in $displayMap {
+        &.is-#{$displayName} {
+            #{$displayVar}: $displayName;
+        }
+    }
+}
+
+.transform {
+
+    // text transform (map -> utilities.scss)
+    @each $transformName,
+    $transformVar in $transformMap {
+        &.is-#{$transformName} {
+            #{$transformVar}: $transformName;
+        }
+    }
+}
+
+.align {
+
+    // text alignment (map -> utilities.scss)
+    @each $alignName,
+    $alignVar in $alignMap {
+        &.is-#{$alignName} {
+            #{$alignVar}: $alignName;
+        }
+    }
+}
+
+// background color utilities  (map -> config.scss)
+// ******************************************************************
+.background {
+
+    @each $colorName,
+    $colorVar in $colorMap {
+
+        // text color determined already
+        &.is-#{$colorName} {
+            background-color: $colorVar;
+            color: set-color($colorVar);
+        }
+    }
+}
+
+// margin and padding x10
+// ******************************************************************
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .mt-#{$i} {
+        margin-top: unquote($j + 'px') !important;
+    }
+}
+
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .mb-#{$i} {
+        margin-bottom: unquote($j + 'px') !important;
+    }
+}
+
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .m-#{$i} {
+        margin: unquote($j + 'px') !important;
+    }
+}
+
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .pt-#{$i} {
+        padding-top: unquote($j + 'px') !important;
+    }
+}
+
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .pb-#{$i} {
+        padding-bottom: unquote($j + 'px') !important;
+    }
+}
+
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .pr-#{$i} {
+        padding-right: unquote($j + 'px') !important;
+    }
+}
+
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .pl-#{$i} {
+        padding-left: unquote($j + 'px') !important;
+    }
+}
+
+@for $i from 0 through 10 {
+    $j: (100/10 * $i);
+
+    .p-#{$i} {
+        padding: unquote($j + 'px') !important;
+    }
+}
+
+.mheight {
+    min-height: 100vh;
+}
+
+.height {
+    height: 100%;
+}
+
+.height-and-width {
+    height: 100%;
+    width: 100%
+}
+
+.sr {
+    display: none !important;
+}
+
+.ul__reset {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.ol__reset {
+    padding-left: 20px;
+}
+
+.flex{
+    display:flex;
+}

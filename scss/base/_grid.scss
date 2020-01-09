@@ -1,0 +1,219 @@
+﻿// GRID
+
+// grid vars
+$columns        : 12;
+$gutter         : 20px;
+$maxWidth       : 1330px;
+$minWidth       : 320px;
+$variant        : 1000px;
+$fluidWidth     : 90%;
+$extended       : 1400px;
+
+// base container
+// ******************************************************************
+.base {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $maxWidth;
+  width: $fluidWidth;
+  &__extended{
+    max-width: $extended;
+    margin-right: auto;
+    margin-left: auto;
+    width: $fluidWidth;
+  }
+  &.fluid{
+    max-width:none;
+    width:calc(100% - 40px);
+  }
+  &.restricted{
+    max-width:$variant;
+    width: $fluidWidth;
+  }
+}
+
+// body
+// ******************************************************************
+.layout{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+// row parent wrapper
+// ******************************************************************
+.row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -$gutter;
+  margin-left: -$gutter;
+  position: relative;
+
+  // columns
+  // display vertically
+  &.col{
+    flex-direction: column;
+    
+    // reverse column display
+    &.reverse {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // reverse row display
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+// column helpers
+// @include col-offset($)
+// ******************************************************************
+@mixin col-offset($column) {
+  margin-left: 100% / $columns * $column;
+}
+
+// @include col-numbered($)
+// ******************************************************************
+@mixin col-numbered($column) {
+  flex-basis: 100% / $columns * $column;
+  max-width: 100% / $columns * $column;
+}
+
+// @include break($)
+// ******************************************************************
+@mixin break($breakpoint) {
+  @if $breakpoint {
+    @media only screen and (min-width: $breakpoint) { @content; }
+  }
+  @else {
+    @content;
+  }
+}
+
+// @include breakpoint($)
+// breakpoints to match breakpoint map, for consistent breakpoints
+// ******************************************************************
+@mixin breakpoint($size, $breakpoints: $breakpoints) {
+  @if map-has-key($breakpoints, $size) {
+    $size: map-get($breakpoints, $size);
+  }
+  @media screen and (min-width: #{$size}) {
+    @content;
+  }
+}
+
+
+// build columns for each size is sizes map (xs, sm, md, lg, xl) (map -> config.scss)
+// column values generated via for loop through breakpoint sizes
+// ******************************************************************
+@each $size, $breakpoint in $breakpoints {
+
+  @include break($breakpoint) {
+    %col-base-#{$size} {
+      flex: 0 0 auto;
+      padding-right: $gutter;
+      padding-left: $gutter;
+    }
+
+    %col-auto-#{$size} {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+    }
+
+    .col-#{$size} {
+      @extend %col-base-#{$size};
+      @extend %col-auto-#{$size};
+    }
+
+    @for $i from 0 through $columns {
+      .col-#{$size}-offset-#{$i} {
+        @extend %col-base-#{$size};
+        @include col-offset($i);
+      }
+    }
+
+    @for $i from 1 through $columns {
+      .col-#{$size}-#{$i} {
+        @extend %col-base-#{$size};
+        @include col-numbered($i);
+      }
+    }
+
+    // for horizontal displays
+    // ******************************************************************
+    .start-#{$size} {
+      justify-content: flex-start;
+      text-align: start;
+    }
+
+    .center-#{$size} {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .end-#{$size} {
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+    // for vertical displays
+    // parent requires height value
+    // ******************************************************************
+    .top-#{$size} {
+      align-items: flex-start;
+    }
+
+    .middle-#{$size} {
+      align-items: center;
+    }
+
+    .bottom-#{$size} {
+      align-items: flex-end;
+    }
+
+    .baseline-#{$size} {
+      align-items: baseline;
+    }
+
+    .around-#{$size} {
+      justify-content: space-around;
+    }
+
+    .between-#{$size} {
+      justify-content: space-between;
+    }
+
+    // element reordering displays
+    // ******************************************************************
+    .first-#{$size} {
+      order: -1;
+    }
+
+    .last-#{$size} {
+      order: 1;
+    }
+
+    .hide-#{$size} {
+      display: none;
+    }
+
+    .show-#{$size} {
+      display: block;
+    }
+
+    .show-flex-#{$size} {
+      display: flex;
+    }
+  }
+}
+
+.no-gutters{
+  margin:0 !important;
+    > *[class^='col-']{
+      padding:0 !important;
+  }
+}

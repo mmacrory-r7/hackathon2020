@@ -1,0 +1,50 @@
+﻿//TYPE
+$root-size: 62.5%;
+$body-size: 1.4rem;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-heading;
+}
+
+@mixin heading-size($size) {
+	font-size: $size + rem;
+	margin: 0;
+	line-height: ($size + .6) + rem;
+}
+
+h1 {
+	@include heading-size(6.4);
+}
+
+h2,
+.h2 {
+	@include heading-size(3.2);
+}
+
+h3,
+.h3 {
+	@include heading-size(2.2);
+}
+
+h4,
+.h4 {
+	@include heading-size(1.2);
+}
+
+p {
+	line-height: ($body-size + 1);
+	margin: 0;
+}
+
+a {
+	color: $primary;
+	@include transition(all, 0.3s, ease-in);
+	&:hover {
+		color: $primary;
+	}
+}

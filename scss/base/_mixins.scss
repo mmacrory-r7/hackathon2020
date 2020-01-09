@@ -1,0 +1,65 @@
+// Mixins
+
+// Transitions
+// Usage: 
+// @include transition(all, 0.3s, ease-in)
+@mixin transition($property:all, $duration:0.2s, $timing:ease) {
+    -webkit-transition: $property $duration $timing;
+    -moz-transition: $property $duration $timing;
+    -o-transition: $property $duration $timing;
+    transition: $property $duration $timing;
+}
+
+
+// Call gradient scrim
+// Usage: 
+// @include scrim(color, color)
+@mixin scrim($colorbottom, $colortop, $direction) {
+    background: -moz-linear-gradient(to $direction, rgba($colorbottom, 0) 0%, rgba($colortop, 1) 100%);
+    background: -webkit-linear-gradient(to $direction, rgba($colorbottom, 0) 0%, rgba($colortop, 1) 100%);
+    background: linear-gradient(to $direction, rgba($colorbottom, 0) 0%, rgba($colortop, 1) 100%);
+}
+
+
+// Call gradient whatever
+// Usage: 
+// @include gradient(color, color)
+@mixin gradient($colorbottom, $colortop, $direction) {
+    background: linear-gradient(to $direction, rgba($colorbottom, 0) 0%, rgba($colortop, 1) 100%);
+}
+
+// Position
+// Usage: 
+// @include position(pos, pos, pos, pos)
+@mixin position($position, $top, $bottom, $left, $right) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+// Rotate
+@mixin rotate($amount){
+    transform: rotate($amount + deg);
+    -webkit-transform: rotate($amount + deg);
+    -moz-transform: rotate($amount + deg);
+    -ms-transform: rotate($amount + deg);
+}
+
+// marketing gradients
+@mixin marketing-gradient-blue{
+    background-image: linear-gradient( 45deg, rgb(48, 117, 156) 5%, rgb(34, 177, 204) 35%, rgb(100, 219, 197) 72%, rgb(72, 130, 167) 95%);
+}
+  
+@mixin marketing-gradient-orange{
+    background-image: linear-gradient( 45deg, rgb(244, 189, 110) 5%, rgb(244, 164, 110) 18%, rgb(245, 133, 83) 42%, rgb(245, 161, 97) 77%, rgb(244, 189, 110) 95%);
+}
+  
+@mixin marketing-gradient-grey{
+    background-image: linear-gradient( 45deg, rgb(211, 218, 220) 5%, rgb(215, 220, 222) 35%, rgb(176, 181, 185) 72%, rgb(139, 144, 149) 95%);
+}
+
+@mixin wrapper-gradient-grey{
+    background-image: linear-gradient(0deg, rgba(237,241,242,1) 25%, rgba(255,255,255,1) 100%);
+}

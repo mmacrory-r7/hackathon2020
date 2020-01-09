@@ -1,0 +1,95 @@
+//SITE CONFIGURATION
+
+@import 'https://fonts.googleapis.com/css?family=Muli:400,700,900|Roboto:400,500,700';
+@import 'rapid7.css';
+
+$font-family-heading     :  'Muli', Helvetica, Arial, sans-serif;
+$font-family-body        :  'Roboto', Helvetica, Arial, sans-serif;
+
+
+// default font weight
+// update to suit font selection
+// ******************************************************************
+$font-weight-regular-heading  :   400;
+$font-weight-semi-heading     :   700;
+$font-weight-bold-heading     :   900;
+
+$font-weight-regular-body     :   400;
+$font-weight-semi-body        :   500;
+$font-weight-bold-body        :   700;
+
+// global colours
+// primary, secondary, tertiary & accent
+// ******************************************************************
+$primary             :   #519BC8;
+$secondary           :   #B1C1C9;
+$tertiary            :   #EDF1F2; 
+$accent              :   #E95F26;
+$transparent         :   transparent;
+
+$success             :   #00b26e;
+$warning             :   #ff9100;
+$error               :   #e53935;
+$info                :   #2196f3;
+
+$white               :   #FFF;
+$black               :   #595959;
+$grey                :   #252b2d;
+$lightgrey           :   #C8C8C8;
+$disabled            :   #b2b2b2;
+$default             :   $grey;
+
+$text-color          :   $black;
+$body-bg             :   $white;
+
+// color map
+$colorMap: (
+    primary: $primary,
+    secondary: $secondary,
+    tertiary: $tertiary,
+    accent: $accent,
+    default: $default,
+    success: $success,
+    warning: $warning,
+    error: $error,
+    info: $info,
+    lightgrey: $lightgrey,
+    white: $white,
+    black: $black,
+    grey: $grey,
+    disabled: $disabled,
+);
+
+// global breakpoint size map
+// ******************************************************************
+$breakpoints: (
+    xs: 0px,
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1100px,
+    xxl: 1280px
+);
+
+// button vars
+// ******************************************************************
+$pill           :   50px;
+$round          :   2px;
+$square         :   0px;
+$circle         :   50%;
+$btnstyle       :   $pill;
+
+// color definition based on background shade of the above
+// color: set-color($color);
+// ******************************************************************
+@function set-color($color) {
+    @if (lightness($color) > 60) {
+        // Lighter background, return dark color
+        @return $black;
+    }
+    @else {
+        // Darker background, return light color
+        @return $white;
+    }
+  }
+
